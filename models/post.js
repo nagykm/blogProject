@@ -5,8 +5,7 @@ const postSchema = new Schema({
     subTitle: String,
     author: String,
     body: String,
-    comments:[{body: String,comAuthor:String,date: Date}],
-    date:{type:Date,default:Date.now()},
+    comments:[{body: String,comAuthor:String,date:Date}],
     hidden:Boolean,
 })
 Post = mongoose.model('Post',postSchema);
