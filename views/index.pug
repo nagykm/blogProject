@@ -1,3 +1,26 @@
 html 
+    head 
+        link(rel="stylesheet" href="css/style.css")
+        
     body
-        h1= title
+        ul.posts-wrapper
+            each post in posts
+                if post.hidden
+                    -continue
+                else
+                    span.post-section
+                        li.posts-element#title= post.title
+                        li.posts-element#subTitle= post.subTitle
+                        li.posts-element#author= post.author
+                        li.posts-element#body= post.postBody 
+                        li.comment-section
+                            -var i = 0;
+                            each comment in post.comments
+                                -if(i>=1){break}else{i++}
+                                div.comment
+                                    span.commentBody= comment.commentAuth
+                                    span.commentBody= comment.date
+                                    span.commentBody= comment.commentBody
+
+
+        

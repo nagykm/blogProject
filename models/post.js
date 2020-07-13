@@ -4,9 +4,9 @@ const postSchema = new Schema({
     title: String,
     subTitle: String,
     author: String,
-    body: String,
-    comments:[{body: String,comAuthor:String,date:Date}],
+    postBody: String,
+    comments:[{commentBody: String,commentAuth:String,date:{type: Date,default: Date.now}}],
     hidden:Boolean,
-})
+},{timestamps:true})
 Post = mongoose.model('Post',postSchema);
 module.exports = Post;

@@ -1,0 +1,15 @@
+*{padding:0px;margin:0px}
+body{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.post-section{
+    padding:0px 40px;
+}
+.comment{
+    padding: 10px;
+}
