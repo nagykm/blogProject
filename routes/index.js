@@ -15,9 +15,6 @@ router.get('/',async(req,res)=>{
 const isReal = (req,res,next)=>{
     if(req.body.name){
         next();
-    }else{
-        res.send('Rendszerhiba');
-        return;
     } 
 }
 router.post('/:id',isReal,(req,res)=>{
